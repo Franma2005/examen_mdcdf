@@ -14,11 +14,11 @@ class ListviewScreen extends StatelessWidget {
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  leading: Icon(AppRoutes.MenuOptions[index].icon),
-                  title: Text(AppRoutes.MenuOptions[index].name),
+                  leading: Icon(AppRoutes.ListViweOptions[index].icon),
+                  title: Text(AppRoutes.ListViweOptions[index].name),
                   onTap: () {
                     Navigator.pushNamed(
-                        context, AppRoutes.MenuOptions[index].route);
+                        context, AppRoutes.ListViweOptions[index].route);
                   },
                 ),
             separatorBuilder: (context, index) => const Divider(),

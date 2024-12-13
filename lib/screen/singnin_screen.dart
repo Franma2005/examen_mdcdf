@@ -1,3 +1,4 @@
+import 'package:examen_mdcdf/routes/route.dart';
 import 'package:examen_mdcdf/widgets/custom_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,9 @@ class SingninScreen extends StatelessWidget {
     };
 
     return Scaffold(
-      body: SingleChildScrollView(
+      body: Column(children: [
+        FlutterLogo(size: 50,),
+        SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Form(
           key: myFormKey,
@@ -42,8 +45,14 @@ class SingninScreen extends StatelessWidget {
                 formValues: formValues,
               ),
               const SizedBox(height: 30),
+              FloatingActionButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                        context, AppRoutes.MenuOptions[2].route); 
+                },
+                child: const Text("Sign in"),
+              ),
               AlertDialog(
-                title: const Center(child: Text("Alerta")),
                 actions: [
                   TextButton(
                       onPressed: () => Navigator.pop(context),
@@ -54,6 +63,7 @@ class SingninScreen extends StatelessWidget {
           ),
         ),
       ),
+      ],)
     );
   }
 }

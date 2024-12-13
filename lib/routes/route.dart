@@ -28,6 +28,9 @@ class AppRoutes {
       name: "List screen",
       screen: const ListviewScreen()
     ),
+  ];
+
+  static final ListViweOptions = <MenuOption>[
     MenuOption(
       route: "monitores",
       icon: Icons.access_alarm,
@@ -46,6 +49,9 @@ class AppRoutes {
     Map<String, Widget Function(BuildContext)> AppRoutes = {};
 
     for (final option in MenuOptions) {
+      AppRoutes.addAll({option.route: (BuildContext context) => option.screen});
+    }
+    for (final option in ListViweOptions) {
       AppRoutes.addAll({option.route: (BuildContext context) => option.screen});
     }
 
