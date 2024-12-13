@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           FloatingActionButton(
             onPressed: () {
               Navigator.pushNamed(
-                        context, AppRoutes.MenuOptions[1].name);
+                        context, AppRoutes.MenuOptions[1].route);
             },
             child: const Text("Sign in"),
           ),

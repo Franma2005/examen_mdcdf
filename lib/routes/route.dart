@@ -1,4 +1,7 @@
 import 'package:examen_mdcdf/models/menu_option.dart';
+import 'package:examen_mdcdf/screen/listview_screen_mdcdf.dart';
+import 'package:examen_mdcdf/screen/monitores_screen.dart';
+import 'package:examen_mdcdf/screen/pistas_screen_mdcd.dart';
 import 'package:examen_mdcdf/screen/screens.dart';
 import 'package:examen_mdcdf/screen/singnin_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +22,24 @@ class AppRoutes {
       name: "Sign screen",
       screen: const SingninScreen(),
     ),
+    MenuOption(
+      route: "list",
+      icon: Icons.abc,
+      name: "List screen",
+      screen: const ListviewScreen()
+    ),
+    MenuOption(
+      route: "monitores",
+      icon: Icons.access_alarm,
+      name: "Monitores Screen",
+      screen: const MonitoresScreen()
+    ), 
+    MenuOption(
+      route: "pistas",
+      icon: Icons.ac_unit_sharp,
+      name: "Pistas",
+      screen: const PistasScreen()
+    )
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
