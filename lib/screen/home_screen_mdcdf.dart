@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             width: double.infinity,
             height: 300,
             fit: BoxFit.cover,
-            fadeInDuration: Duration(milliseconds: 3000),
+            fadeInDuration: Duration(milliseconds: 0),
           ),
           FloatingActionButton(
             onPressed: () {
