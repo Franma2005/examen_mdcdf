@@ -26,15 +26,6 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       onChanged: (value) => formValues[formProperty] = value,
-      /*onChanged: (value) {
-        formValues[formProperty] = value;
-        print('Valores de formValues: ${formValues.toString()}');
-      },*/
-      validator: (value){
-        if (value!.length < 3){
-          return 'Mínimo 3 caracteres';
-        }
-      },
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
