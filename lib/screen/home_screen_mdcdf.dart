@@ -1,3 +1,5 @@
+import 'package:examen_mdcdf/routes/route.dart';
+import 'package:examen_mdcdf/screen/singnin_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,7 +19,10 @@ class HomeScreen extends StatelessWidget {
             fadeInDuration: Duration(milliseconds: 3000),
           ),
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(
+                        context, AppRoutes.MenuOptions[1].name);
+            },
             child: const Text("Sign in"),
           ),
           const FloatingActionButton(

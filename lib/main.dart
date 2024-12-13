@@ -1,3 +1,4 @@
+import 'package:examen_mdcdf/routes/route.dart';
 import 'package:examen_mdcdf/screen/screens.dart';
 import 'package:examen_mdcdf/screen/singnin_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SingninScreen(),
+      title: 'Flutter Demo',
+      //home: const Listview2Screen(),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.getAppRoutes(),
     );
   }
 }
